@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise - Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>SpendWise</h1>
+        <p>Manage your money. Control your spending.</p>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="card">
+                <h3>Monthly Budget</h3>
+                <h2 id="budget">KSh 30,000</h2>
+                <button id="edit-budget">Edit Budget</button>
+            </div>
+
+            <div class="card">
+                <h3>Total Spent</h3>
+                <h2 id="total-spent">KSh 0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Remaining Balance</h3>
+                <h2 id="remaining">KSh 30,000</h2>
+            </div>
+        </section>
+
+        <section class="expense-section">
+            <h2>Add New Expense</h2>
+
+            <form id="expense-form">
+                <input type="text" id="expense-name"
+                    placeholder="Expense name" required>
+
+                <input type="number" id="expense-amount"
+                    placeholder="Amount in KSh" min="1" required>
+
+                <select id="expense-category">
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Education">Education</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <input type="date" id="expense-date" required>
+
+                <button type="submit">Add Expense</button>
+            </form>
+        </section>
+
+        <section class="transactions">
+            <h2>Recent Transactions</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Expense</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="expense-list"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SpendWise Budget Tracker. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
